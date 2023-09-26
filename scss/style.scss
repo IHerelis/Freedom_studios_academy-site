@@ -14,6 +14,14 @@ body {
 
 .container--page {
   @include container-main(rem(1440), rem(0));
+  @media (max-width: em(1368.98)) {
+    .header__freedom {
+      @include container-main(rem(1440), rem(100));
+    }
+    .wopld--class--container {
+      @include container-main(rem(1440), rem(100));
+    }
+  }
 }
 
 .header--container {
@@ -23,12 +31,6 @@ body {
 }
 .header__freedom {
   @include container-main(rem(1440), rem(165));
-}
-
-@media (max-width: em(1368.98)) {
-  .header__freedom {
-    @include container-main(rem(1440), rem(100));
-  }
 }
 
 .header__nav {
@@ -42,7 +44,6 @@ body {
     }
   }
 }
-
 
 .header__items {
   max-width: 70%;
@@ -80,6 +81,79 @@ body {
     display: inline-block;
     width: 20px;
     height: 20px;
+    object-fit: cover;
+  }
+}
+
+// ========  ============
+
+// ======== wopld--class section ==============
+
+.wopld--class {
+  background-color: $colorGray;
+  min-height: rem(600);
+}
+
+.wopld--class--container {
+  @include container-main(rem(1440), rem(165));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: rem(123);
+}
+
+.wopld__class__pictures {
+  padding-top: rem(40);
+  padding-bottom: rem(60);
+  margin-top: rem(120);
+}
+
+.wopld__class__img {
+  // height: rem(376);
+  // width: 100%;
+  width: rem(540);
+  aspect-ratio: 1.43 / 1;
+  img {
+    @include img-standart;
+  }
+}
+.wopld__class__items {
+  display: grid;
+  align-items: end;
+}
+
+.class__item {
+  padding-block: rem(48);
+  margin-bottom: rem(84);
+  .class__item__subtitle {
+    line-height: 1.25; /* 125% */
+    text-transform: uppercase;
+    margin-bottom: rem(5);
+  }
+  .class__item__title {
+    font-size: rem(36);
+    line-height: 1.11; /* 111.111% */
+    text-transform: uppercase;
+    margin-bottom: rem(27);
+    width: 80%;
+  }
+}
+
+.class__item__list {
+  line-height: 1.25; /* 125% */
+  text-transform: uppercase;
+  display: grid;
+  row-gap: rem(14);
+  li {
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+  }
+  & li::before {
+    content: "";
+    background: url("../img/Frame-Li_mark.svg");
+    display: inline-block;
+    width: rem(24);
+    height: rem(24);
     object-fit: cover;
   }
 }

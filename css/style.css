@@ -59,6 +59,18 @@ body {
   padding-inline: 0rem;
   margin-inline: auto;
 }
+@media (max-width: 85.56125em) {
+  .container--page .header__freedom {
+    width: min(100% - 0rem, 90rem);
+    padding-inline: 6.25rem;
+    margin-inline: auto;
+  }
+  .container--page .wopld--class--container {
+    width: min(100% - 0rem, 90rem);
+    padding-inline: 6.25rem;
+    margin-inline: auto;
+  }
+}
 
 .header--container {
   min-height: 43.75rem;
@@ -72,13 +84,6 @@ body {
   margin-inline: auto;
 }
 
-@media (max-width: 85.56125em) {
-  .header__freedom {
-    width: min(100% - 0rem, 90rem);
-    padding-inline: 6.25rem;
-    margin-inline: auto;
-  }
-}
 .header__nav {
   padding-top: 1.875rem;
   margin-bottom: 7.8125rem;
@@ -131,6 +136,81 @@ body {
   display: inline-block;
   width: 20px;
   height: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wopld--class {
+  background-color: #1F2327;
+  min-height: 37.5rem;
+}
+
+.wopld--class--container {
+  width: min(100% - 0rem, 90rem);
+  padding-inline: 10.3125rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 7.6875rem;
+       column-gap: 7.6875rem;
+}
+
+.wopld__class__pictures {
+  padding-top: 2.5rem;
+  padding-bottom: 3.75rem;
+  margin-top: 7.5rem;
+}
+
+.wopld__class__img {
+  width: 33.75rem;
+  aspect-ratio: 1.43/1;
+}
+.wopld__class__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wopld__class__items {
+  display: grid;
+  align-items: end;
+}
+
+.class__item {
+  padding-block: 3rem;
+  margin-bottom: 5.25rem;
+}
+.class__item .class__item__subtitle {
+  line-height: 1.25; /* 125% */
+  text-transform: uppercase;
+  margin-bottom: 0.3125rem;
+}
+.class__item .class__item__title {
+  font-size: 2.25rem;
+  line-height: 1.11; /* 111.111% */
+  text-transform: uppercase;
+  margin-bottom: 1.6875rem;
+  width: 80%;
+}
+
+.class__item__list {
+  line-height: 1.25; /* 125% */
+  text-transform: uppercase;
+  display: grid;
+  row-gap: 0.875rem;
+}
+.class__item__list li {
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem;
+}
+.class__item__list li::before {
+  content: "";
+  background: url("../img/Frame-Li_mark.svg");
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
