@@ -21,6 +21,9 @@ body {
     .wopld--class--container {
       @include container-main(rem(1440), rem(100));
     }
+    .leader--container {
+      @include container-main(rem(1440), rem(100));
+    }
   }
 }
 
@@ -90,7 +93,7 @@ body {
 // ======== wopld--class section ==============
 
 .wopld--class {
-  background-color: $colorGray;
+  background-color: $colorGray-bg;
   min-height: rem(600);
 }
 
@@ -105,17 +108,17 @@ body {
   padding-top: rem(40);
   padding-bottom: rem(60);
   margin-top: rem(120);
-}
-
-.wopld__class__img {
-  // height: rem(376);
-  // width: 100%;
-  width: rem(540);
-  aspect-ratio: 1.43 / 1;
-  img {
-    @include img-standart;
+  .wopld__class__img {
+    // height: rem(376);
+    // width: 100%;
+    width: rem(540);
+    aspect-ratio: 1.43 / 1;
+    img {
+      @include img-standart;
+    }
   }
 }
+
 .wopld__class__items {
   display: grid;
   align-items: end;
@@ -155,5 +158,61 @@ body {
     width: rem(24);
     height: rem(24);
     object-fit: cover;
+  }
+}
+
+// ========= leader section ===========
+
+.leader {
+  background-color: $colorBlack-bg;
+  min-height: rem(600);
+}
+
+.leader--container {
+  @include container-main(rem(1440), rem(165));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: rem(111);
+}
+
+.leader__items {
+  display: grid;
+  align-items: end;
+}
+
+.leader__item {
+  width: 80%;
+  padding-block: rem(84);
+  margin-bottom: rem(108);
+  .leader__item__subtitle {
+    font-weight: 700;
+    line-height: 1.25; /* 125% */
+    text-transform: uppercase;
+    margin-bottom: rem(5);
+  }
+  .leader__item__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11; /* 111.111% */
+    text-transform: uppercase;
+    margin-bottom: rem(10);
+  }
+  .leader__item__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.39; /* 138.889% */
+  }
+}
+
+.leader__pictures {
+  padding-top: rem(40);
+  padding-bottom: rem(60);
+  margin-top: rem(120);
+  .leader__img {
+    width: rem(540);
+    aspect-ratio: 1.43 / 1;
+    img {
+      @include img-standart;
+    }
   }
 }
