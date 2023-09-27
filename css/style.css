@@ -75,11 +75,16 @@ body {
     padding-inline: 6.25rem;
     margin-inline: auto;
   }
+  .container--page .semester--container {
+    width: min(100% - 0rem, 90rem);
+    padding-inline: 6.25rem;
+    margin-inline: auto;
+  }
 }
 
 .header--container {
   min-height: 43.75rem;
-  background: radial-gradient(838.19% 378.3% at 69.44% -79.86%, rgba(31, 35, 39, 0) 0%, #191C1F 47.89%, rgba(31, 35, 39, 0) 100%), url("../img/unsplash_br2HgQuvq6I.png") center/100% 100% no-repeat;
+  background: radial-gradient(838.19% 378.3% at 69.44% -79.86%, rgba(31, 35, 39, 0) 0%, #191C1F 47.89%, rgba(31, 35, 39, 0) 100%), url("../img/unsplash_header-bg-fon.png") center/100% 100% no-repeat;
   background-size: cover;
 }
 
@@ -275,6 +280,64 @@ body {
 .leader__pictures .leader__img img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.semester {
+  min-height: 31.25rem;
+  background: radial-gradient(570.45% 265.28% at 47.92% 0%, #191C1F 0%, rgba(25, 28, 31, 0) 88.96%, rgba(25, 28, 31, 0.04) 100%), url("../img/unsplash_semester-bg-fon.png") center/100% 100% no-repeat;
+  background-size: cover;
+}
+
+.semester--container {
+  width: min(100% - 0rem, 90rem);
+  padding-inline: 10.3125rem;
+  margin-inline: auto;
+  min-height: 31.25rem;
+  display: grid;
+  grid-template-columns: 0.67fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.semester__item {
+  text-align: center;
+}
+.semester__item .semester__items__subtitle {
+  font-size: 1.125rem;
+  line-height: 1.11; /* 111.111% */
+  text-transform: uppercase;
+}
+.semester__item .semester__items__title {
+  font-size: 4rem;
+  line-height: 1.17; /* 117.188% */
+  text-transform: uppercase;
+  margin-bottom: 0.625rem;
+}
+.semester__item .semester__items__text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.25; /* 125% */
+  margin-bottom: 1.875rem;
+}
+
+.semester__items__button {
+  line-height: 1.25; /* 125% */
+  text-transform: uppercase;
+  padding: 1.25rem;
+  border-radius: 2.5rem;
+  background-color: #E11B19;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9375rem;
+}
+.semester__items__button::after {
+  content: "";
+  background: url("../img/bx_chevron-right.svg") center/25px no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
   -o-object-fit: cover;
      object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

@@ -24,12 +24,15 @@ body {
     .leader--container {
       @include container-main(rem(1440), rem(100));
     }
+    .semester--container {
+      @include container-main(rem(1440), rem(100));
+    }
   }
 }
 
 .header--container {
   min-height: rem(700);
-  background: radial-gradient(838.19% 378.3% at 69.44% -79.86%, rgba(31, 35, 39, 0.00) 0%, #191C1F 47.89%, rgba(31, 35, 39, 0.00) 100%), url("../img/unsplash_br2HgQuvq6I.png")center /100% 100% no-repeat;
+  background: radial-gradient(838.19% 378.3% at 69.44% -79.86%, rgba(31, 35, 39, 0.00) 0%, #191C1F 47.89%, rgba(31, 35, 39, 0.00) 100%), url("../img/unsplash_header-bg-fon.png")center /100% 100% no-repeat;
   background-size: cover
 }
 .header__freedom {
@@ -216,3 +219,67 @@ body {
     }
   }
 }
+
+// ========== semester section =============
+
+.semester {
+  min-height: rem(500);
+  background: radial-gradient(570.45% 265.28% at 47.92% 0%, #191C1F 0%, rgba(25, 28, 31, 0.00) 88.96%, rgba(25, 28, 31, 0.04) 100%), url("../img/unsplash_semester-bg-fon.png")center /100% 100% no-repeat;
+  background-size: cover
+}
+
+.semester--container {
+  @include container-main(rem(1440), rem(165));
+  min-height: rem(500);
+  display: grid;
+  grid-template-columns: 0.67fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.semester__items {
+  // min-width: rem(746);
+}
+
+.semester__item {
+  text-align: center;
+  .semester__items__subtitle {
+    font-size: rem(18);
+    line-height: 1.11; /* 111.111% */
+    text-transform: uppercase;
+  }
+  .semester__items__title{
+    font-size: rem(64);
+    line-height: 1.17; /* 117.188% */
+    text-transform: uppercase;
+    margin-bottom: rem(10);
+  }
+  .semester__items__text {
+    font-size: rem(24);
+    font-weight: 400;
+    line-height: 1.25; /* 125% */
+    margin-bottom: rem(30);
+  }
+}
+
+.semester__items__button {
+  line-height: 1.25; /* 125% */
+  text-transform: uppercase;
+  padding: rem(20);
+  border-radius: rem(40);
+  background-color: $colorRed;
+  display: inline-flex;
+  align-items: center;
+  gap: rem(15);
+  &::after {
+    content: "";
+    background: url("../img/bx_chevron-right.svg")center / 25px no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+}
+
+// ========= footer section ===========
+
