@@ -34,6 +34,26 @@ body {
       @include container-main(rem(1440), rem(100));
     }
   }
+  @media (max-width: em(998.98)) {
+    .header__freedom {
+      @include container-main(rem(1440), rem(50));
+    }
+    .benefits--container {
+      @include container-main(rem(1440), rem(50));
+    }    
+    .wopld--class--container {
+      @include container-main(rem(1440), rem(50));
+    }
+    .leader--container {
+      @include container-main(rem(1440), rem(50));
+    }
+    .semester--container {
+      @include container-main(rem(1440), rem(50));
+    }
+    .footer--container {
+      @include container-main(rem(1440), rem(50));
+    }
+  }
 }
 
 .header--container {
@@ -102,6 +122,15 @@ body {
   }
 }
 
+@media (max-width: em(898.98)) {
+  .header__items {
+    max-width: 90%;
+    .header__items__title {
+      font-size: rem(54);
+    }
+  }
+}
+
 // ======== benefits section ============
 
 .benefits {
@@ -113,8 +142,28 @@ body {
   @include container-main(rem(1440), rem(165));
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: rem(28);
+  column-gap: rem(28);
   align-items: start;
+  @media (max-width: em(1168.98)) {
+    grid-template-columns: repeat(3, minmax(rem(80), 1fr));
+    grid-template-rows: auto 1fr;
+    .element--title {
+      grid-column: 1 / -1;
+    }
+    .benefits__element {
+      justify-self: center;
+      padding-block: rem(40);
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+  @media (max-width: em(998.98)) {
+    grid-template-columns: minmax(rem(80), 1fr);
+    .benefits__element  {
+      padding-block: rem(20);
+    }
+  }
 }
 
 .benefits__element {
@@ -143,12 +192,6 @@ body {
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: rem(20);
-}
-
-.benefits__element__logo {
-}
-
-.benefits__element__items {
 }
 
 // ======== wopld--class section ==============
@@ -222,6 +265,34 @@ body {
   }
 }
 
+@media (max-width: em(1168.98)) {
+  .wopld--class--container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .wopld__class__items {
+    order: 1;
+    .class__item {
+      margin-bottom: rem(0);
+    }
+    .class__item__title {
+      width: 100%;
+    }
+  }
+  .wopld__class__pictures {
+    order: 2;
+    margin-top: rem(0);
+  }
+}
+
+@media (max-width: em(668.98)) {
+  .wopld__class__pictures {
+    .wopld__class__img {
+      width: 100%;
+    }
+  }
+}
+
 // ========= leader section ===========
 
 .leader {
@@ -278,6 +349,39 @@ body {
   }
 }
 
+@media (max-width: em(1168.98)) {
+  .leader--container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .leader__items {
+    order: 1;
+    justify-items: center;
+    .leader__item {
+      width: 63%;
+      margin-bottom: rem(0);
+    }
+  }
+  .leader__pictures {
+    order: 2;
+    margin-top: rem(0);
+  }
+}
+
+@media (max-width: em(668.98)) {
+  .leader__items {
+    .leader__item {
+      width: 80%;
+      padding-block: rem(40);
+    }
+  }
+  .leader__pictures {
+    .leader__img {
+      width: 100%;
+    }
+  }
+}
+
 // ========== semester section =============
 
 .semester {
@@ -293,10 +397,6 @@ body {
   grid-template-columns: 0.67fr;
   align-items: center;
   justify-content: center;
-}
-
-.semester__items {
-  // min-width: rem(746);
 }
 
 .semester__item {
@@ -341,6 +441,17 @@ body {
   &:hover {
     transform: scale(1.05);
     background-color: $colorRed-hover;
+  }
+}
+
+@media (max-width: em(898.98)) {
+  .semester--container {
+    grid-template-columns: 0.9fr;
+  }
+  .semester__item {
+    .semester__items__title{
+      font-size: rem(54);
+    }
   }
 }
 
