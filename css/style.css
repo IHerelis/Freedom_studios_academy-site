@@ -65,6 +65,11 @@ body {
     padding-inline: 6.25rem;
     margin-inline: auto;
   }
+  .container--page .benefits--container {
+    width: min(100% - 0rem, 90rem);
+    padding-inline: 6.25rem;
+    margin-inline: auto;
+  }
   .container--page .wopld--class--container {
     width: min(100% - 0rem, 90rem);
     padding-inline: 6.25rem;
@@ -158,6 +163,52 @@ body {
 .header__items__button:hover {
   transform: scale(1.05);
   background-color: rgb(201, 4, 4);
+}
+
+.benefits {
+  background-color: #191C1F;
+  min-height: 12.5rem;
+}
+
+.benefits--container {
+  width: min(100% - 0rem, 90rem);
+  padding-inline: 10.3125rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.benefits__element {
+  padding-block: 3.75rem;
+}
+.benefits__element h3 {
+  font-size: 2.25rem;
+  line-height: 1.11; /* 111.111% */
+  text-transform: uppercase;
+}
+.benefits__element p {
+  font-size: 1.5rem;
+  line-height: 1.25; /* 125% */
+  text-transform: uppercase;
+}
+.benefits__element .benefits__element__logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.benefits__element .benefits__element__logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.element--image {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .wopld--class {
